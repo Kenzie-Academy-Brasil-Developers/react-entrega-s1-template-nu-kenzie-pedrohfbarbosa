@@ -1,0 +1,11 @@
+.btn-standard {
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+
+  padding: 0.8rem 1.25rem;
+}
+
+.btn-standard:hover {
+  background-color: var(--color-brand-200);
+}
