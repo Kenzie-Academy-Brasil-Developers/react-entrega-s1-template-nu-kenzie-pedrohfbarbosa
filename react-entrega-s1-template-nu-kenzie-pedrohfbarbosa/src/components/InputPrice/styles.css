@@ -8,6 +8,11 @@
   background-color: var(--color-grey-100);
   border-radius: 0.5rem;
 }
+.input-wrapper input ::placeholder {
+  font-weight: 400;
+  font-size: var(--font-size-4);
+  color: var(--color-grey-300);
+}
 
 #inputPrice {
   width: 100%;

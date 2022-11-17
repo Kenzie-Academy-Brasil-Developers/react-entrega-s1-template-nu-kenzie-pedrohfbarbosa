@@ -7,31 +7,28 @@ import { ButtonDash } from "../ButtonDash";
 export const MainHeader = ({ setListToRender, list, setTypeToRender }) => {
   const handleClickAll = () => {
     const newList = [...list];
-    if (newList.length > 0) {
-      setListToRender(newList);
-      setTypeToRender("all")
-    }
+
+    setListToRender(newList);
+    setTypeToRender("all");
   };
 
   const handleClickEntry = () => {
     const newList = list.filter((e) => e.type === "entry");
-    if (newList.length > 0) {
-      setListToRender(newList);
-      setTypeToRender("entry")
-    }
+
+    setListToRender(newList);
+    setTypeToRender("entry");
   };
 
   const handleClickExit = () => {
     const newList = list.filter((e) => e.type === "exit");
-    if (newList.length > 0) {
-      setListToRender(newList);
-      setTypeToRender("exit")
-    }
+
+    setListToRender(newList);
+    setTypeToRender("exit");
   };
 
   return (
     <div className="main-header">
-      <h3>Resumo financeiro</h3>
+      <h3 className="title-3 color-grey-400">Resumo financeiro</h3>
       <div className="btns-wrapper">
         <ButtonDash text="Todos" handleClick={handleClickAll} />
         <ButtonDash text="Entradas" handleClick={handleClickEntry} />

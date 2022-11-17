@@ -9,3 +9,9 @@
   border: none;
   outline: none;
 }
+
+.inputDescription ::placeholder {
+  font-weight: 400;
+  font-size: var(--font-size-4);
+  color: var(--color-grey-300);
+}

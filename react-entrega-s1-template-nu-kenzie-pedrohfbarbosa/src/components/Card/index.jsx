@@ -2,6 +2,7 @@ import "../../styles/globalStyles.css";
 import "../../styles/color.css";
 import "../../styles/text.css";
 import "./styles.css";
+import { calculateTotal } from "../Dashboard";
 
 export const Card = ({
   description,
@@ -14,16 +15,6 @@ export const Card = ({
   setListToRender,
   typeToRender,
 }) => {
-  const calculateTotal = (list) => {
-    const sumEntry = list
-      .filter((e) => e.type === "entry")
-      .reduce((x, y) => x + y.value, 0);
-    const sumExit = list
-      .filter((e) => e.type === "exit")
-      .reduce((x, y) => x + y.value, 0);
-    return sumEntry - sumExit;
-  };
-
   const handleClick = (e) => {
     const newList = [...list];
     const indexRemove = newList.findIndex((e) => e.id === id);
@@ -40,15 +31,15 @@ export const Card = ({
   return (
     <li className={type === "exit" ? "card" : "card border-green"}>
       <div>
-        <h4>{description}</h4>
+        <h4 className="title-5 color-grey-400">{description}</h4>
         <div>
-          <span>R$ {value}</span>
-          <button className="delete-card" onClick={handleClick}>
-            teste
-          </button>
+          <span className="text-headline color-grey-400">R$ {value}</span>
+          <button className="delete-card" onClick={handleClick}></button>
         </div>
       </div>
-      <span>{type === "exit" ? "Despesa" : "Entrada"}</span>
+      <span className="text-body color-grey-400">
+        {type === "exit" ? "Despesa" : "Entrada"}
+      </span>
     </li>
   );
 };

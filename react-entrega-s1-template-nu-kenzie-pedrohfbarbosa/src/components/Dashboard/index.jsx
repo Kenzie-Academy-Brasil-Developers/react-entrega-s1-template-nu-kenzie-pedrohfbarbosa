@@ -9,34 +9,7 @@ import { MainHeader } from "../MainHeader";
 import { CardsWrapper } from "../CardsWrapper";
 import { EmptyList } from "../EmptyList";
 
-const listTest = [
-  {
-    id: 0,
-    description: "Salário",
-    value: 10000,
-    type: "entry",
-  },
-  {
-    id: 1,
-    description: "Gastos",
-    value: 1000,
-    type: "exit",
-  },
-  {
-    id: 2,
-    description: "Vendas",
-    value: 1000,
-    type: "entry",
-  },
-  {
-    id: 3,
-    description: "Contas a pagar",
-    value: 500,
-    type: "exit",
-  },
-];
-
-const calculateTotal = (list) => {
+export const calculateTotal = (list) => {
   const sumEntry = list
     .filter((e) => e.type === "entry")
     .reduce((x, y) => x + y.value, 0);
@@ -47,16 +20,29 @@ const calculateTotal = (list) => {
 };
 
 export const Dashboard = ({ logout }) => {
-  const [list, setList] = useState([...listTest]);
+  const [isDarkmode, setDarkmode] = useState(false);
+  const [list, setList] = useState([]);
   const [listToRender, setListToRender] = useState([...list]);
   const [typeToRender, setTypeToRender] = useState("all");
   const [total, setTotal] = useState(calculateTotal(list));
 
   return (
-    <div>
-      <Header logout={logout} />
+    <div className={isDarkmode ? "dash-content dark-mode" : "dash-content"}>
+      <Header
+        logout={logout}
+        isDarkmode={isDarkmode}
+        setDarkmode={setDarkmode}
+      />
       <div className="container dashboard">
-        <Aside total={total} />
+        <Aside
+          total={total}
+          list={list}
+          setList={setList}
+          listToRender={listToRender}
+          setListToRender={setListToRender}
+          typeToRender={typeToRender}
+          setTotal={setTotal}
+        />
         <main className="main-content">
           <MainHeader
             typeToRender={typeToRender}

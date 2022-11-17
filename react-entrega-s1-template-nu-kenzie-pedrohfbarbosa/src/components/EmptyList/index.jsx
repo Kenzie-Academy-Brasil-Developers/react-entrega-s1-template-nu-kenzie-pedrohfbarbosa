@@ -7,7 +7,18 @@ import imgEmpty from "../../assets/img/NoCard.png";
 export const EmptyList = () => {
   return (
     <div className="empty-list">
-      <img src={imgEmpty} alt="Empty Card" />
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+      <div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
-  )
+  );
 };

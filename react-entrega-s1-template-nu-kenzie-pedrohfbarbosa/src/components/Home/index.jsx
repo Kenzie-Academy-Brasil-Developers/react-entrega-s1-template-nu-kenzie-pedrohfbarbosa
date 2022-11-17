@@ -6,7 +6,7 @@ import imgLogo from "../../assets/img/NuKenzie.svg";
 import imgIllustration from "../../assets/img/illustration.svg";
 import { Button } from "../Button";
 
-export const Home = ({login}) => {
+export const Home = ({ login }) => {
   return (
     <div className="home-content bg-color-grey-400">
       <div className="container home-content-wrapper">

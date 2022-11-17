@@ -5,7 +5,11 @@ import "./styles.css";
 
 export const Button = ({ text, handleClick, type }) => {
   return (
-    <button type={type} className="btn-standard bg-color-brand-100 color-grey-100 text-headline" onClick={handleClick}>
+    <button
+      type={type}
+      className="btn-standard bg-color-brand-100 text-headline"
+      onClick={handleClick}
+    >
       {text}
     </button>
   );

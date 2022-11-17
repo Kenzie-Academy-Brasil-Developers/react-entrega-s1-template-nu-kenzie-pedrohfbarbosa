@@ -1,7 +1,7 @@
 .select {
   height: 3rem;
   width: 8rem;
-  padding: 0 1rem;
+  padding: 0 0.7rem;
   display: flex;
   align-items: center;
   background-color: var(--color-grey-100);
@@ -9,4 +9,5 @@
   border: none;
   outline: none;
   cursor: pointer;
+  font-size: 0.875rem;
 }
