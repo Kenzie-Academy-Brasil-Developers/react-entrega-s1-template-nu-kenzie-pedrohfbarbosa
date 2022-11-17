@@ -19,7 +19,7 @@ export const calculateTotal = (list) => {
   return sumEntry - sumExit;
 };
 
-export const Dashboard = ({ logout }) => {
+export const Dashboard = ({ setHomePage }) => {
   const [isDarkmode, setDarkmode] = useState(false);
   const [list, setList] = useState([]);
   const [listToRender, setListToRender] = useState([...list]);
@@ -29,7 +29,7 @@ export const Dashboard = ({ logout }) => {
   return (
     <div className={isDarkmode ? "dash-content dark-mode" : "dash-content"}>
       <Header
-        logout={logout}
+        setHomePage={setHomePage}
         isDarkmode={isDarkmode}
         setDarkmode={setDarkmode}
       />
