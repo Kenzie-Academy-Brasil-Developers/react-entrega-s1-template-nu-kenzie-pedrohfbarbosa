@@ -1,20 +1,18 @@
-.dashboard {
+.main-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.main-content {
-  width: 100%;
-  max-width: 35rem;
+.btns-wrapper {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 1rem;
 }
 
 @media (max-width: 900px) {
-  .dashboard {
+  .main-header {
     flex-direction: column;
-    align-items: center;
     gap: 2rem;
   }
 }

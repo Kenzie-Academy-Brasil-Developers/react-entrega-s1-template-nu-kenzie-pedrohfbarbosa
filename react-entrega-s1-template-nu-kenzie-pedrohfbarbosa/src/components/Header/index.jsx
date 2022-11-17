@@ -2,7 +2,6 @@ import "../../styles/globalStyles.css";
 import "../../styles/color.css";
 import "../../styles/text.css";
 import "./styles.css";
-import imgLogo from "../../assets/img/NuKenzie.svg";
 import { ButtonDash } from "../ButtonDash";
 
 export const Header = ({ logout }) => {

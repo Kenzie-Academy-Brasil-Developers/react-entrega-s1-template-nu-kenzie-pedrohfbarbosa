@@ -1,0 +1,13 @@
+.empty-list {
+  width: 100%;
+}
+
+.empty-list img {
+  max-width: 100%;
+}
+
+@media (max-width: 900px) {
+  .empty-list {
+    padding: 1rem;
+  }
+}
