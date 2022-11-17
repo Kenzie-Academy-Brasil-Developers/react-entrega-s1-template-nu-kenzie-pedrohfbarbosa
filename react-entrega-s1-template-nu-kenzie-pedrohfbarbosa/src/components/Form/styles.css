@@ -1,0 +1,19 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-grey-200);
+  gap: 2rem;
+}
+.tagMoney {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.inputs-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

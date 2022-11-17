@@ -1,0 +1,17 @@
+.inputDescription {
+  height: 3rem;
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-grey-100);
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.inputDescription ::placeholder {
+  font-weight: 400;
+  font-size: var(--font-size-4);
+  color: var(--color-grey-300);
+}

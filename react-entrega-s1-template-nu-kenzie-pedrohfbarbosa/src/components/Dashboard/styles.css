@@ -1,0 +1,24 @@
+.dash-content {
+  background-color: var(--color-light);
+  min-height: 100vh;
+}
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .dashboard {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}

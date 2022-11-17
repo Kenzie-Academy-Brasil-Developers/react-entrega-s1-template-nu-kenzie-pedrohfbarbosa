@@ -1,0 +1,39 @@
+.home-content {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.home-content-wrapper {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.aside-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 22rem;
+}
+
+.img-Illus {
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.img-Illus img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  /* .img-Illus {
+    display: none;
+  } */
+}

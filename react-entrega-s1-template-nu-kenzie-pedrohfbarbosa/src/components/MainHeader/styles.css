@@ -1,0 +1,18 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btns-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .main-header {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

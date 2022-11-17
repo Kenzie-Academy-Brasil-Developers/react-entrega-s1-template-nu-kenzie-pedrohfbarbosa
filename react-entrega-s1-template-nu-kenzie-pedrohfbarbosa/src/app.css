@@ -1,0 +1,13 @@
+.app {
+  min-height: 100vh;
+  font-family: var(--font-family-default);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+}
+
+.app-content {
+}
+
+@keyframes App-logo-spin {
+}

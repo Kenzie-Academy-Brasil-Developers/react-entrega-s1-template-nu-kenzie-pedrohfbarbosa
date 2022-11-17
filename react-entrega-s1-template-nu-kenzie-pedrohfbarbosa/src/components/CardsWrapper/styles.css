@@ -1,0 +1,12 @@
+.cards-wrapper {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .cards-wrapper {
+    padding: 0 1rem;
+  }
+}

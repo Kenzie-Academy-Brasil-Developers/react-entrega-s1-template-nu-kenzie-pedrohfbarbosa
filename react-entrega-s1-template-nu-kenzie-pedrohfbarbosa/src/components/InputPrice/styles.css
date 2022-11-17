@@ -1,0 +1,34 @@
+.input-wrapper {
+  position: relative;
+  height: 3rem;
+  width: 8rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-grey-100);
+  border-radius: 0.5rem;
+}
+.input-wrapper input ::placeholder {
+  font-weight: 400;
+  font-size: var(--font-size-4);
+  color: var(--color-grey-300);
+}
+
+#inputPrice {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+#inputPrice::-webkit-outer-spin-button,
+#inputPrice::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+#inputPrice[type="number"] {
+  -moz-appearance: textfield;
+}
