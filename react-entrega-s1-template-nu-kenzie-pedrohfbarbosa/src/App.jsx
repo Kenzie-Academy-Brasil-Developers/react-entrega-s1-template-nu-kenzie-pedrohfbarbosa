@@ -9,18 +9,14 @@ import { useState } from "react";
 export const App = () => {
   const [homePage, setHomePage] = useState(true);
 
-  const login = () => {
-    setHomePage(false);
-  };
-
-  const logout = () => {
-    setHomePage(true);
-  };
-
   return (
     <div className="app">
       <div className="app-content">
-        {homePage ? <Home login={login} /> : <Dashboard logout={logout} />}
+        {homePage ? (
+          <Home setHomePage={setHomePage} />
+        ) : (
+          <Dashboard setHomePage={setHomePage} />
+        )}
       </div>
     </div>
   );

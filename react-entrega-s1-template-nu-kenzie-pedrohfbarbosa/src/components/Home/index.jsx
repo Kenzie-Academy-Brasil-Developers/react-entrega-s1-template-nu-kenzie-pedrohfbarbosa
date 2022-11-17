@@ -6,7 +6,11 @@ import imgLogo from "../../assets/img/NuKenzie.svg";
 import imgIllustration from "../../assets/img/illustration.svg";
 import { Button } from "../Button";
 
-export const Home = ({ login }) => {
+export const Home = ({ setHomePage }) => {
+  const handleLogin = () => {
+    setHomePage(false);
+  };
+
   return (
     <div className="home-content bg-color-grey-400">
       <div className="container home-content-wrapper">
@@ -18,7 +22,7 @@ export const Home = ({ login }) => {
             Centralize o controle das suas finanças
           </h2>
           <span className="color-grey-100">de forma rápida e segura</span>
-          <Button handleClick={login} text="Iniciar" />
+          <Button handleClick={handleLogin} text="Iniciar" />
         </div>
         <figure className="img-Illus">
           <img src={imgIllustration} alt="Illustration" />
